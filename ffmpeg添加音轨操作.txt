@@ -1,0 +1,7 @@
+ffmpeg -i .\wx_article.mp4 -vcodec copy -an out.mp4
+
+提取bai简单，从music.m4a中提取3:30到5:30的2分钟du 到clip.m4a
+ffmpeg -i music.m4a -ss 3:30 -to 5:30 -c copy clip.m4a
+而加入到其他视频，涉及太多种可zhi能，比如音频dao位置、时长是否和视频相符，涉及同步等问题。
+没法一一涉及。只能按最简单的，音频和视频从开始就同时播的情况
+ffmpeg -i 歌曲名.m4a -i 视频名.mp4 -i 47 -c copy 输出合并视频名字.mp4
